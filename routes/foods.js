@@ -10,13 +10,17 @@ exports.get = function(req, res)
 	if (req.params.foodid)
 	{
 		// fetch one food object
-		db.foods.findOne({"name" : req.params.foodid}, function(err, food) {
+		db.foods.findOne(
+				{"name" : req.params.foodid},
+				{"name": 1, "type" : 1, "_id" : 0},
+				function(err, food) {
 			if (err || !food)
 			{
 				res.status(404).send("Food " + req.params.foodid + " not found!");
 			}
 			else
 			{
+				food.instock = { "href" : "http://localhost:3000/foods/" + req.params.foodid + "/instock" };
 				res.json(food);
 			}
 		});
