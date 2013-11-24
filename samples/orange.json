@@ -1,0 +1,15 @@
+{ 
+  "name" : "orange", 
+  "type" : 
+  { 
+	  "foodtype": "fruit", 
+	  "href" : "http://localhost:3000/foodtypes/fruit"
+  },
+  "stock" : 
+  [
+    { "storename" : "tesco", "href" : "http://localhost:3000/stores/tesco", "instock": false},
+    { "storename" : "waitrose", "href" : "http://localhost:3000/stores/waitrose", "instock": true },
+    { "storename" : "sainsburys", "href" : "http://localhost:3000/stores/sainsburys", "instock": true},
+    { "storename" : "asda", "href" : "http://localhost:3000/stores/asda", "instock": true }
+  ]
+}
