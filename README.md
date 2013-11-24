@@ -6,6 +6,7 @@ Playing with REST in Node and Mongo
 ## Usage
 
 npm install
+
 node app.js
 
 ## Developing
