@@ -1,11 +1,11 @@
-{ 
-  "name" : "orange", 
-  "type" : 
-  { 
-	  "foodtype": "fruit", 
+{
+  "name" : "orange",
+  "type" :
+  {
+	  "foodtype": "fruit",
 	  "href" : "http://localhost:3000/foodtypes/fruit"
   },
-  "stock" : 
+  "stock" :
   [
     { "storename" : "tesco", "href" : "http://localhost:3000/stores/tesco", "instock": false},
     { "storename" : "waitrose", "href" : "http://localhost:3000/stores/waitrose", "instock": true },

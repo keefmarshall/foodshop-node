@@ -27,8 +27,12 @@ exports.get = function(req, res)
 	}
 	else
 	{
-		db.foods.find(function(err, foods) {
+		db.foods.find({}, {"name": 1, "type" : 1, "_id" : 0}, function(err, foods) {
 			// TODO error checking
+			for (var i = 0; i < foods.length; i++)
+			{
+				foods[i].instock = { "href" : "http://localhost:3000/foods/" + foods[i].name + "/instock" };
+			}
 			res.json(foods);
 		});
 	}
